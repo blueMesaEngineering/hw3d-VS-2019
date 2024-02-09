@@ -706,5 +706,6 @@
     <None Include="assimp\include\assimp\vector3.inl">
       <Filter>assimp</Filter>
     </None>
+    <None Include="zlib1.dll" />
   </ItemGroup>
 </Project>
