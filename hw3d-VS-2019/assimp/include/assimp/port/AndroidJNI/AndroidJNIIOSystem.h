@@ -2,9 +2,7 @@
 Open Asset Import Library (assimp)
 ----------------------------------------------------------------------
 
-Copyright (c) 2006-2018, assimp team
-
-
+Copyright (c) 2006-2016, assimp team
 All rights reserved.
 
 Redistribution and use of this software in source and binary forms,
@@ -40,52 +38,55 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ----------------------------------------------------------------------
 */
 
-/** @file Declares a helper class, "CommentRemover", which can be
- *  used to remove comments (single and multi line) from a text file.
- */
-#ifndef AI_REMOVE_COMMENTS_H_INC
-#define AI_REMOVE_COMMENTS_H_INC
+/** @file Android implementation of IOSystem using the standard C file functions.
+ * Aimed to ease the access to android assets */
 
+#if __ANDROID__ and __ANDROID_API__ > 9 and defined(AI_CONFIG_ANDROID_JNI_ASSIMP_MANAGER_SUPPORT)
+#ifndef AI_ANDROIDJNIIOSYSTEM_H_INC
+#define AI_ANDROIDJNIIOSYSTEM_H_INC
 
-#include <assimp/defs.h>
+#include <assimp/DefaultIOSystem.h>
+#include <android/asset_manager.h>
+#include <android/asset_manager_jni.h>
+#include <android/native_activity.h>
 
-namespace Assimp    {
+namespace Assimp	{
 
 // ---------------------------------------------------------------------------
-/** \brief Helper class to remove single and multi line comments from a file
- *
- *  Some mesh formats like MD5 have comments that are quite similar
- *  to those in C or C++ so this code has been moved to a separate
- *  module.
- */
-class ASSIMP_API CommentRemover
+/** Android extension to DefaultIOSystem using the standard C file functions */
+class ASSIMP_API AndroidJNIIOSystem : public DefaultIOSystem
 {
-    // class cannot be instanced
-    CommentRemover() {}
-
 public:
 
-    //! Remove single-line comments. The end of a line is
-    //! expected to be either NL or CR or NLCR.
-    //! \param szComment The start sequence of the comment, e.g. "//"
-    //! \param szBuffer Buffer to work with
-    //! \param chReplacement Character to be used as replacement
-    //! for commented lines. By default this is ' '
-    static void RemoveLineComments(const char* szComment,
-        char* szBuffer, char chReplacement = ' ');
+	/** Initialize android activity data */
+	std::string mApkWorkspacePath;
+	AAssetManager* mApkAssetManager;
 
-    //! Remove multi-line comments. The end of a line is
-    //! expected to be either NL or CR or NLCR. Multi-line comments
-    //! may not be nested (as in C).
-    //! \param szCommentStart The start sequence of the comment, e.g. "/*"
-    //! \param szCommentEnd The end sequence of the comment, e.g. "*/"
-    //! \param szBuffer Buffer to work with
-    //! \param chReplacement Character to be used as replacement
-    //! for commented lines. By default this is ' '
-    static void RemoveMultiLineComments(const char* szCommentStart,
-        const char* szCommentEnd,char* szBuffer,
-        char chReplacement = ' ');
+	/** Constructor. */
+	AndroidJNIIOSystem(ANativeActivity* activity);
+
+	/** Destructor. */
+	~AndroidJNIIOSystem();
+
+	// -------------------------------------------------------------------
+	/** Tests for the existence of a file at the given path. */
+	bool Exists( const char* pFile) const;
+
+	// -------------------------------------------------------------------
+	/** Opens a file at the given path, with given mode */
+	IOStream* Open( const char* strFile, const char* strMode);
+
+	// ------------------------------------------------------------------------------------------------
+	// Inits Android extractor
+	void AndroidActivityInit(ANativeActivity* activity);
+
+	// ------------------------------------------------------------------------------------------------
+	// Extracts android asset
+	bool AndroidExtractAsset(std::string name);
+
 };
-} // ! Assimp
 
-#endif // !! AI_REMOVE_COMMENTS_H_INC
+} //!ns Assimp
+
+#endif //AI_ANDROIDJNIIOSYSTEM_H_INC
+#endif //__ANDROID__ and __ANDROID_API__ > 9 and defined(AI_CONFIG_ANDROID_JNI_ASSIMP_MANAGER_SUPPORT)

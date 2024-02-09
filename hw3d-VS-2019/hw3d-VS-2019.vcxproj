@@ -141,22 +141,16 @@
   <ItemGroup>
     <ClInclude Include="App.h" />
     <ClInclude Include="AppOld.h" />
-    <ClInclude Include="assimp\include\assimp\aabb.h" />
     <ClInclude Include="assimp\include\assimp\ai_assert.h" />
     <ClInclude Include="assimp\include\assimp\anim.h" />
-    <ClInclude Include="assimp\include\assimp\AssertHandler.h" />
-    <ClInclude Include="assimp\include\assimp\Base64.hpp" />
     <ClInclude Include="assimp\include\assimp\BaseImporter.h" />
     <ClInclude Include="assimp\include\assimp\Bitmap.h" />
     <ClInclude Include="assimp\include\assimp\BlobIOSystem.h" />
     <ClInclude Include="assimp\include\assimp\ByteSwapper.h" />
-    <ClInclude Include="assimp\include\assimp\camera.h" />
     <ClInclude Include="assimp\include\assimp\cexport.h" />
     <ClInclude Include="assimp\include\assimp\cfileio.h" />
     <ClInclude Include="assimp\include\assimp\cimport.h" />
-    <ClInclude Include="assimp\include\assimp\ColladaMetaData.h" />
     <ClInclude Include="assimp\include\assimp\color4.h" />
-    <ClInclude Include="assimp\include\assimp\commonMetaData.h" />
     <ClInclude Include="assimp\include\assimp\Compiler\poppack1.h" />
     <ClInclude Include="assimp\include\assimp\Compiler\pstdint.h" />
     <ClInclude Include="assimp\include\assimp\Compiler\pushpack1.h" />
@@ -165,23 +159,25 @@
     <ClInclude Include="assimp\include\assimp\DefaultIOStream.h" />
     <ClInclude Include="assimp\include\assimp\DefaultIOSystem.h" />
     <ClInclude Include="assimp\include\assimp\DefaultLogger.hpp" />
+    <ClInclude Include="assimp\include\assimp\Defines.h" />
     <ClInclude Include="assimp\include\assimp\defs.h" />
     <ClInclude Include="assimp\include\assimp\Exceptional.h" />
     <ClInclude Include="assimp\include\assimp\Exporter.hpp" />
     <ClInclude Include="assimp\include\assimp\fast_atof.h" />
     <ClInclude Include="assimp\include\assimp\GenericProperty.h" />
-    <ClInclude Include="assimp\include\assimp\GltfMaterial.h" />
     <ClInclude Include="assimp\include\assimp\Hash.h" />
     <ClInclude Include="assimp\include\assimp\Importer.hpp" />
     <ClInclude Include="assimp\include\assimp\importerdesc.h" />
     <ClInclude Include="assimp\include\assimp\IOStream.hpp" />
     <ClInclude Include="assimp\include\assimp\IOStreamBuffer.h" />
     <ClInclude Include="assimp\include\assimp\IOSystem.hpp" />
+    <ClInclude Include="assimp\include\assimp\irrXMLWrapper.h" />
     <ClInclude Include="assimp\include\assimp\light.h" />
     <ClInclude Include="assimp\include\assimp\LineSplitter.h" />
     <ClInclude Include="assimp\include\assimp\LogAux.h" />
     <ClInclude Include="assimp\include\assimp\Logger.hpp" />
     <ClInclude Include="assimp\include\assimp\LogStream.hpp" />
+    <ClInclude Include="assimp\include\assimp\Macros.h" />
     <ClInclude Include="assimp\include\assimp\material.h" />
     <ClInclude Include="assimp\include\assimp\MathFunctions.h" />
     <ClInclude Include="assimp\include\assimp\matrix3x3.h" />
@@ -190,7 +186,6 @@
     <ClInclude Include="assimp\include\assimp\mesh.h" />
     <ClInclude Include="assimp\include\assimp\metadata.h" />
     <ClInclude Include="assimp\include\assimp\NullLogger.hpp" />
-    <ClInclude Include="assimp\include\assimp\ObjMaterial.h" />
     <ClInclude Include="assimp\include\assimp\ParsingUtils.h" />
     <ClInclude Include="assimp\include\assimp\pbrmaterial.h" />
     <ClInclude Include="assimp\include\assimp\postprocess.h" />
@@ -203,7 +198,6 @@
     <ClInclude Include="assimp\include\assimp\SceneCombiner.h" />
     <ClInclude Include="assimp\include\assimp\SGSpatialSort.h" />
     <ClInclude Include="assimp\include\assimp\SkeletonMeshBuilder.h" />
-    <ClInclude Include="assimp\include\assimp\SmallVector.h" />
     <ClInclude Include="assimp\include\assimp\SmoothingGroups.h" />
     <ClInclude Include="assimp\include\assimp\SpatialSort.h" />
     <ClInclude Include="assimp\include\assimp\StandardShapes.h" />
@@ -219,9 +213,7 @@
     <ClInclude Include="assimp\include\assimp\vector3.h" />
     <ClInclude Include="assimp\include\assimp\version.h" />
     <ClInclude Include="assimp\include\assimp\Vertex.h" />
-    <ClInclude Include="assimp\include\assimp\XmlParser.h" />
     <ClInclude Include="assimp\include\assimp\XMLTools.h" />
-    <ClInclude Include="assimp\include\assimp\ZipArchiveIOSystem.h" />
     <ClInclude Include="AssTest.h" />
     <ClInclude Include="Bindable.h" />
     <ClInclude Include="BindableBase.h" />
@@ -345,25 +337,94 @@
     <ClCompile Include="WinMain.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="LightVectorData.hlsl" />
-    <FxCompile Include="PhongPS.hlsl" />
-    <FxCompile Include="PhongPSNormalMap.hlsl" />
-    <FxCompile Include="PhongPSNormalMapObject.hlsl" />
-    <FxCompile Include="PhongPSNotex.hlsl" />
-    <FxCompile Include="PhongPSSpec.hlsl" />
-    <FxCompile Include="PhongPSSpecNormalMap.hlsl" />
-    <FxCompile Include="PhongVS.hlsl" />
-    <FxCompile Include="PhongVSNormalMap.hlsl" />
-    <FxCompile Include="PhongVSNotex.hlsl" />
-    <FxCompile Include="PointLight.hlsl" />
-    <FxCompile Include="ShaderOps.hlsl" />
-    <FxCompile Include="SolidPS.hlsl" />
-    <FxCompile Include="SolidVS.hlsl" />
-    <FxCompile Include="Transform.hlsl" />
+    <FxCompile Include="LightVectorData.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="PhongPS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+    </FxCompile>
+    <FxCompile Include="PhongPSNormalMap.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+    </FxCompile>
+    <FxCompile Include="PhongPSNormalMapObject.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+    </FxCompile>
+    <FxCompile Include="PhongPSNotex.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+    </FxCompile>
+    <FxCompile Include="PhongPSSpec.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+    </FxCompile>
+    <FxCompile Include="PhongPSSpecNormalMap.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+    </FxCompile>
+    <FxCompile Include="PhongVS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+    </FxCompile>
+    <FxCompile Include="PhongVSNormalMap.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+    </FxCompile>
+    <FxCompile Include="PhongVSNotex.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+    </FxCompile>
+    <FxCompile Include="PointLight.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="ShaderOps.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="SolidPS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+    </FxCompile>
+    <FxCompile Include="SolidVS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)%(Filename).cso</ObjectFileOutput>
+    </FxCompile>
+    <FxCompile Include="Transform.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="assimp-vc140-mt.dll" />
+    <None Include="assimp\include\assimp\.editorconfig" />
     <None Include="assimp\include\assimp\color4.inl" />
+    <None Include="assimp\include\assimp\config.h.in" />
     <None Include="assimp\include\assimp\material.inl" />
     <None Include="assimp\include\assimp\matrix3x3.inl" />
     <None Include="assimp\include\assimp\matrix4x4.inl" />
