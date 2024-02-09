@@ -1,0 +1,3 @@
+Loading image [Images\brickwall_normal_obj.jpg]: failed to load
+106
+C:\Users\ukrgr\source\repos\hw3d\hw3d\Surface.cpp

@@ -1,0 +1,4 @@
+[pBlob->GetBufferPointer] 00000249F260ED30
+[pBlob->GetBufferSize] 12772
+[File] C:\Users\ukrgr\source\repos\hw3d\hw3d\Graphics.cpp
+[Line] 151
