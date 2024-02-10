@@ -5,12 +5,12 @@
 #include <optional>
 // NOTE: I tried the quotes (" ") below and the full include path for the includes, and VS 2019 recognized it with an autocomplete.
 // Now VS 2019 doesn't throw a fit with precompiled error notifications....  So maybe try it this way for now. NDG 202402102108
-//#include <assimp/Importer.hpp>
-//#include <assimp/scene.h>
-//#include <assimp/postprocess.h>
-#include "assimp/include/assimp/Importer.hpp"
-#include "assimp/include/assimp/scene.h"
-#include "assimp/include/assimp/postprocess.h"
+#include <assimp/Importer.hpp>
+#include <assimp/scene.h>
+#include <assimp/postprocess.h>
+//#include "assimp/include/assimp/Importer.hpp"
+//#include "assimp/include/assimp/scene.h"
+//#include "assimp/include/assimp/postprocess.h"
 #include "ConditionalNoexcept.h"
 #include "ConstantBuffers.h"
 #include <type_traits>
