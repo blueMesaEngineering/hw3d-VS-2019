@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>C:\Users\ukrgr\source\repos\hw3d\x64\Debug\hw3d.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>C:\Users\ukrgr\source\repos\hw3d\hw3d\PhongPS.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\ukrgr\source\repos\hw3d\hw3d\PhongPSNormalMap.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\ukrgr\source\repos\hw3d\hw3d\PhongPSNormalMapObject.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\ukrgr\source\repos\hw3d\hw3d\PhongPSNotex.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\ukrgr\source\repos\hw3d\hw3d\PhongPSSpec.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\ukrgr\source\repos\hw3d\hw3d\PhongPSSpecNormalMap.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\ukrgr\source\repos\hw3d\hw3d\PhongVS.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\ukrgr\source\repos\hw3d\hw3d\PhongVSNormalMap.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\ukrgr\source\repos\hw3d\hw3d\PhongVSNotex.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\ukrgr\source\repos\hw3d\hw3d\SolidPS.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\ukrgr\source\repos\hw3d\hw3d\SolidVS.cso</FullPath>
+    </ContentFile>
+  </ContentFiles>
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>
